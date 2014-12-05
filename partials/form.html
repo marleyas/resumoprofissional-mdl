@@ -1,0 +1,28 @@
+<div class="page-header">
+  <h2>Faça contato <a ng-click="returnToHome()" title="Restaurar" class="btn btn-sm btn-default pull-right"><i class="fa fa-compress"></i></a></h2>
+</div> 
+<div ng-hide="contato.hideForm">
+  <div class="alert alert-success alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+    <strong>Obrigado!</strong> Entrarei em contato em breve.
+  </div>
+</div>
+<form name="formContato" role="form" ng-submit="validaForm()" novalidate>
+  <div class="form-group form-group-lg" ng-class="{'has-error':formContato.nome.$error.required || formContato.nome.$error.minlength}">
+    <label class="control-label">Nome *</label>
+    <input type="text" class="form-control input-lg" name="nome" placeholder="Seu nome" ng-model="contato.nome" ng-minlength="3" required />
+    <span class="help-block" ng-show="formContato.nome.$error.required"> Nome é obrigatório </span>
+    <span class="help-block" ng-show="formContato.nome.$error.minlength"> O nome está incompleto </span>
+  </div>
+  <div class="form-group form-group-lg" ng-class="{'has-error':formContato.email.$error.required || formContato.email.$error.email}">
+    <label class="control-label">Email *</label>
+    <input type="email" class="form-control input-lg" name="email" placeholder="Seu email" ng-model="contato.email" required />
+    <span class="help-block" ng-show="formContato.email.$error.required"> E-mail é obrigatório </span>
+    <span class="help-block" ng-show="formContato.email.$error.email"> Formato do e-mail é inválido </span>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Mensagem</label>
+    <textarea class="form-control input-lg" name="mensagem" ng-model="contato.mensagem" rows="4"></textarea>
+  </div>                                       
+  <button type="submit" class="btn btn-lg btn-primary btn-send-lg" ng-disabled="!contato.hideForm || formContato.$invalid">Enviar</button>                  
+</form>  

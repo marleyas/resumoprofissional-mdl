@@ -1,0 +1,196 @@
+          <!-- HOME TEMPLATE -->          
+          <div class="row">
+            <div class="col-md-6"><!-- LADO ESQUERDO -->
+              <h1>Marley Adriano</h1>
+              <ul class="nav nav-pills nav-stacked">
+                <li class="lead baseText" ng-repeat="tab in tabs" 
+                      ng-class="{textUpper:isActiveTab(tab.url)}">{{tab.title}}</li>                
+              </ul>
+              <div class="page-header">
+                <h2>Quem sou <i class="fa fa-user pull-right"></i></h2>
+              </div>
+              <img class="floatLeft img-thumbnail" src="img/marley.png" alt="Foto" width="150">
+              <p>Marley Adriano de Souza Silva.<br>
+              <a ng-click="onClickTab(tabs[0])" class="linkHide">Desenvolvedor Web</a> por paixão.<br>            
+                <a ng-click="onClickTab(tabs[3])" class="linkHide">Assistente Social</a> e <a ng-click="onClickTab(tabs[2])" class="linkHide">Gestor Público</a> por vocação.<br>
+                <a ng-click="onClickTab(tabs[1])" class="linkHide">Eletrotécnico</a> por curiosidade.<br>
+              Entusiasta das novas tecnologias e suas possibilidades.<br>
+              Ativista Social. Agente Político.<br>
+              (Bem) casado com Adriana.<br>
+              Pai da Ana Luíza e do Arthur.<br>
+              Cristão.</p>
+              <!-- FORMAÇAO -->  
+              <div class="page-header">
+                <h2>Formação <i class="fa fa-graduation-cap pull-right"></i></h2>
+              </div>
+              <h3>Fundação João Pinheiro <span class="label label-default pull-right">2011-2012</span></h3>
+              <h4>Especialista em Administração Pública</h4>
+              <p>O Programa de Especialização em Administração Pública (Proap) é voltado para profissionais com formação em nível superior                e que atuem em diferentes esferas de governo e instituições parceiras. O curso tem como foco a gestão: políticas públicas,                desenvolvimento e conhecimento organizacionais, gestão estratégica e relações humanas. <a href="http://www.pucminas.br/graduacao/index1.php?tipo_form=info&codigo=16&pag=2537" target="_blank"><i class="fa fa-external-link-square" title="http://www.pucminas.br/graduacao/index1.php?tipo_form=info&codigo=16&pag=2537"></i></a></p>
+              <br>
+              <h3>PUC Minas <span class="label label-default pull-right">2006-2009</span></h3>
+              <h4>Bacharel em Serviço Social <small><span class="label label-success">CRESS-MG 12823</span></small></h4>
+              <p>O Curso de Serviço Social da PUC Minas forma assistentes sociais aptos a desenvolver atividades de planejamento, gestão e pesquisa, mediação de conflitos, estudos de caso; atendimento, orientação e encaminhamentos no âmbito dos programas sociais; execução e avaliação de ações voltadas para o acesso e a ampliação dos direitos sociais. A ética é o valor central do curso. <a href="http://www.eg.fjp.mg.gov.br/index.php/especializacao" target="_blank"><i class="fa fa-external-link-square" title="http://www.eg.fjp.mg.gov.br/index.php/especializacao"></i></a></p>
+              <br>
+              <h3>SENAI <span class="label label-default pull-right">1991-1994</span></h3>
+              <h4>Técnico em Eletrotécnica/Eletrônica Industrial <small><span class="label label-success">CREA-MG 034936</span></small></h4>
+              <p>O Curso Técnico de Eletrotécnica dá subsidios para atuar em diversos segmentos do mercado, tais como: concessionárias de energia elétrica, prestadoras de serviço, indústrias em geral, atividades de manutenção e automação, indústrias de fabricação de máquinas, componentes e equipamentos elétricos. <a href="http://www7.fiemg.com.br/senai/produto/curso/tecnico-em-eletrotecnica" target="_blank"><i class="fa fa-external-link-square" title="http://www7.fiemg.com.br/senai/produto/curso/tecnico-em-eletrotecnica"></i></a><br>
+              O curso Técnico em Eletrônica Industrial forma profissionais para: Indústrias, Laboratórios de controle de qualidade e de manutenção, empresas de informática, telecomunicações e de produtos eletrônicos. <a href="http://www7.fiemg.com.br/senai/produto/curso/tecnico-em-eletronica" target="_blank"><i class="fa fa-external-link-square" title="http://www7.fiemg.com.br/senai/produto/curso/tecnico-em-eletronica"></i></a></p>
+              <!-- /FORMAÇAO -->
+            </div><!-- /LADO ESQUERDO -->
+            <div class="col-md-6 borderLeft"><!-- LADO DIREITO -->
+              <div class="panel panel-default panel-dispo">
+                <div class="panel-body">                  
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <th style="border-top: none">Disponível para:</th>
+                        <td style="border-top: none">TRABALHO FREE LANCE E CONSULTORIA</td>
+                      </tr>
+                      <tr>
+                        <th>Telefone:</th>
+                        <td>+55 31 95687382</td>
+                      </tr>
+                      <tr>
+                        <th>Email:</th>
+                        <td><a ng-click="scrollToBottom()" style="cursor:pointer">marleyas@gmail.com</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- HABILIDADES -->              
+              <div class="page-header">
+                <h2>Minhas habilidades <i class="fa fa-lightbulb-o pull-right"></i></h2>
+              </div>
+              <ul class="nav nav-tabs">
+                  <li ng-repeat="tab in tabs" 
+                      ng-class="{active:isActiveTab(tab.url)}" 
+                        role="presentation"><a href="" ng-click="onClickTab(tab)">{{tab.title}}</a></li>
+              </ul>
+              <div ng-include="currentTab" class="minhasHabilidades"></div>              
+              <!-- /HABILIDADES -->                
+              <div class="page-header">
+                <h2>Experiência profissional <i class="fa fa-suitcase pull-right"></i></h2>
+              </div>
+              <h3>Prefeitura de Betim <span class="label label-default pull-right">Jan 2013</span></h3>
+              <h4>Coordenador de CRAS</h4>
+              <p>Coordenação, acompanhamento e avaliação da execução dos programas,
+              serviços e projetos da proteção social básica desenvolvidos na unidade.
+              Organização das ações ofertadas pelo PAIF e articulação da rede de serviços
+              sócioassistenciais no território de abrangência da unidade. Realizações:
+                <ul>
+                  <li>Readequação do espaço físico da unidade SEMAS Citrolândia;</li>
+                  <li>Articulação e coordenação do Fórum Intersetorial nas regionais Citrolândia e PTB;</li>
+                  <li>Mapeamento dos processos de trabalho e organização do arquivo técnico.</li>
+                </ul>
+              </p>
+              <br>
+              <h3>CEMIG <span class="label label-default pull-right">Ago 2002 - Abr 2012</span></h3>
+              <h4>Técnico Industrial</h4>
+              <p>Atendimento ao Centro de Operação do Sistema pessoalmente e por
+              telefone, execução de inspeções de segurança em equipamentos do
+              sistema elétrico da potência. Liberação de equipamentos para intervenções.
+              Realizações:
+                <ul>
+                  <li>Participação na implantação e operação da SE Vespasiano 2 500kv.</li>
+                  <li>Comissionamento e operação da Usina Hidrelétrica de Irapé e SE Araçuaí 2 230kv.</li>
+                </ul>
+              </p>
+              <br>
+              <h3>ZETECBS <span class="label label-default pull-right">Jan 2000 - Jul 2002</span></h3>
+              <h4>Desenvolvedor Web</h4>
+              <p>Desenvolvimento de projetos para internet nas linguagens ASP, PHP e Javascript. Os projetos de maior destaque foram o FeiraBH e Guiajá. O FeiraBH foi premiado no concurso OPORTUNIDADES.COM da INFORUSO 2000 e foi incubado na INSOFT - Incubadora de empresas de base tecnológica de Belo Horizonte.</p>
+            </div><!-- LADO DIREITO -->
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <!-- PORTFOLIO -->
+              <div class="page-header">
+                <h2>Portfolio <i class="fa fa-flag pull-right"></i></h2>
+              </div>
+              <p>Alguns projetos que participei: Alexandre Gastão, Analo, Arroz Tia Ana, Auto Brasil Motorpeças, Café Barão, Canil Afeto's, Canil Bullmarolu, CMBI, ComunIP, Confrapar, Conservadora Tropical, Construtora Mecanorte, COTEMIG, Embrapack, Engesoft, Engesoft Serviços, Estalagem Casa Rosada, Estalagem Fazenda Lazer, Eteg, Farlei Wender, Feira BH, Grupo Mogyana, HCS Computadores, IBEF-MG, J.E. Pitbull, Jungle Bulldogs, Lucky Collection, Mello Azevedo, Projeto Boto-Cinza, RMI, Salão de Festas Requinte, Sideweb Solutions, Usina Santa Luzia, Via Sacra, Visiomed.</p>
+              <!-- /PORTFOLIO -->
+              <!-- VISAO TRABALHO -->
+              <div class="page-header">
+                <h2>Minha visão do trabalho <i class="fa fa-quote-right pull-right"></i></h2>
+              </div>
+              <p>Vou recorrer a uma citação que descreve adequadamente meu ponto de vista:</p>
+              <blockquote>
+                <p>"O bom trabalho é aquele que, em alguma medida, me realiza, me dá satisfação e me faz sentir útil para a sociedade em que vivo. Enfim, um trabalho cujo sentido consigo perceber, para o qual não me arrependo de dedicar várias horas do meu dia."</p>
+                <footer>Alessandro Molon <a href="http://www.capitalhumano-fgv.com.br/o-que-e-um-bom-trabalho/" target="_blank"><i class="fa fa-external-link-square" title="http://www.capitalhumano-fgv.com.br/o-que-e-um-bom-trabalho/"></i></a></footer>
+              </blockquote>
+              <!-- /VISAO TRABALHO -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7">
+              <!-- RAZOES CONTRATACAO -->
+              <div class="page-header"  ng-show="currentTab != 'partials/social.html'">
+                <h2>Boas razões para me contratar<i class="fa fa-thumbs-up pull-right"></i></h2>
+              </div>
+              <ul class="list-unstyled" style="line-height: 2" ng-show="currentTab == 'partials/web.html'">
+                <li><span class="fa fa-check text-success"></span> Sólidos conhecimentos em HTML/CSS;</li> 
+                <li><span class="fa fa-check text-success"></span> Experiência com JQuery e frameworks JavaScript (ex. Ember, AngularJs);</li>
+                <li><span class="fa fa-check text-success"></span> Experiência com arquitetura MVC e integração com Back-end;</li>
+                <li><span class="fa fa-check text-success"></span> Experiência com Bootstrap, JQueryUI e Foundation;</li>
+                <li><span class="fa fa-check text-success"></span> Experiência com bancos de dados MySQL, SQL Server, PostgreSQL, Firebase;</li>
+                <li><span class="fa fa-check text-success"></span> Experiência com meios de pagamento eletrônico (PagSeguro, PayPal);</li>
+                <li><span class="fa fa-check text-success"></span> Familiaridade com Git, Grunt, NPM, Bower e IDEs (ex: Zend Studio, PHPStorm, Brackets).</li>                    
+              </ul>              
+              <ul class="list-unstyled" style="line-height: 2" ng-show="currentTab == 'partials/eletro.html'">
+                <li><span class="fa fa-check text-success"></span> Larga experiência na operação de instalações do sistema elétrico de potência em EAT (500Kv);</li>
+                <li><span class="fa fa-check text-success"></span> Experiência em sistemas de automação industrial e programação de CLPs;</li>
+                <li><span class="fa fa-check text-success"></span> Bom conhecimento de microcontroladores. Domínio da plataforma Arduino;</li>
+                <li><span class="fa fa-check text-success"></span> Experiência em manutenção de máquinas e equipamentos eletrônicos;</li>
+                <li><span class="fa fa-check text-success"></span> Experiência em execução de instalações elétricas residenciais, comerciais e industriais;</li>
+                <li><span class="fa fa-check text-success"></span> Bom conhecimento das normas técnicas. Curso NR10, NR33, NR35 e normas CEMIG;</li>
+                <li><span class="fa fa-check text-success"></span> Treinamento em primeiros socorros, direção defensiva, prevenção de acidentes para CIPA, etc.</li>
+              </ul>
+              <ul class="list-unstyled" style="line-height: 2" ng-show="currentTab == 'partials/gestao.html'">
+                <li><span class="fa fa-check text-success"></span> Comprometimento com o serviço público e com os resultados; </li>
+                <li><span class="fa fa-check text-success"></span> Experiência no atendimento ao público. Sensibilidade no trato com as pessoas;</li>
+                <li><span class="fa fa-check text-success"></span> Boa capacidade de articulação e negociação. Experiência no trabalho em rede;</li>
+                <li><span class="fa fa-check text-success"></span> Conhecimento das ferramentas da gestão da qualidade.</li> 
+              </ul>              
+              <!-- /RAZOES CONTRATACAO -->  
+            </div>
+            <div class="col-md-5">
+            <!-- CONTATO -->
+            <div class="panel panel-default">
+              <div class="panel-heading"><strong>Faça contato</strong> <a href="#/form" title="Maximizar" class="btn btn-default btn-xs pull-right"><i class="fa fa-arrows-alt"></i></a></div>
+              <div class="panel-body">
+                <div ng-hide="contato.hideForm">
+                  <div class="alert alert-success alert-dismissible" role="alert"  ng-class="{'fade-in': !contato.hideForm}">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+                    <strong>Obrigado!</strong> Entrarei em contato em breve.
+                  </div>
+                </div>
+                <form name="formContato" role="form" ng-submit="validaForm()" novalidate>
+                  <div class="form-group" ng-class="{'has-error':formContato.nome.$error.required || formContato.nome.$error.minlength}">
+                    <label class="control-label">Nome *</label>
+                    <input type="text" class="form-control input-sm" name="nome" id="formNome" placeholder="Seu nome" ng-model="contato.nome" ng-minlength="3" required />
+                    <span class="help-block" ng-show="formContato.nome.$error.required"> Nome é obrigatório </span>
+                    <span class="help-block" ng-show="formContato.nome.$error.minlength"> O nome está incompleto </span>
+                  </div>
+                  <div class="form-group" ng-class="{'has-error':formContato.email.$error.required || formContato.email.$error.email}">
+                    <label class="control-label">Email *</label>
+                    <input type="email" class="form-control input-sm" name="email" placeholder="Seu email" ng-model="contato.email" required />
+                    <span class="help-block" ng-show="formContato.email.$error.required"> E-mail é obrigatório </span>
+                    <span class="help-block" ng-show="formContato.email.$error.email"> Formato do e-mail é inválido </span>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Mensagem</label>
+                    <textarea class="form-control input-sm" id="formMensagem" ng-model="contato.mensagem" rows="4"></textarea>
+                  </div>                                       
+                  <button type="submit" class="btn btn-sm btn-primary btn-send" ng-disabled="!contato.hideForm || formContato.$invalid">Enviar</button>                  
+                </form>                
+              </div>
+            </div>            
+            <!-- /CONTATO -->
+            </div>
+          </div>  
+          <!-- /HOME TEMPLATE -->
+          <ul class="ul-roler nav nav-pills nav-stacked">
+            <li><a class="btn btn-xs" ng-click="scrollToTop()"><i class="fa fa-chevron-up"></i></a></li>
+            <li><a class="btn btn-xs" ng-click="scrollToBottom()"><i class="fa fa-chevron-down"></i></a></li>
+          </ul> 

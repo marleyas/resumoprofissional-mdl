@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="AppMod">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="author" content="Marley Adriano de Souza Silva" />
+        <meta name="application-name" content="Resumo Profissional" />
+        <meta name="generator" content="Adobe Brackets" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">      
+        <script src="js/jquery-1.7.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>      
+        <script src="js/angular.min.js"></script>
+        <script src="js/firebase.js"></script>
+        <script src="js/angularfire.min.js"></script>      
+        <script src="js/angular-route.min.js"></script>
+        <script src="js/angular-animate.min.js"></script>
+        <script src="js/angular-locale_pt-br.js"></script>
+        <script src="js/app.js"></script> 
+        <title>Resumo Profissional</title>
+    </head>
+    <body>
+        <div class="container">
+          <!-- BARRA SUPERIOR -->
+          <div class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a id="bandLink" class="navbar-brand" href="#/home">RESUMO PROFISSIONAL</a>
+            </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://www.facebook.com/marley.silva.betim" title="Facebook" target="_blank"><i class="fa fa-2x fa-facebook-square"></i></a></li>
+                <li><a href="http://twitter.com/marleyas" title="Twitter" target="_blank"><i class="fa fa-2x fa-2x fa-2x fa-twitter-square"></i></a></li>
+                <li><a href="http://www.linkedin.com/pub/marley-silva/37/958/4aa" title="LinkedIn" target="_blank"><i class="fa fa-2x fa-2x fa-linkedin-square"></i></a></li>
+                <li><a href="https://plus.google.com/u/0/112022116974752100038" title="Google+" target="_blank"><i class="fa fa-2x fa-google-plus-square"></i></a></li>
+              </ul>
+            </div>
+          </div><!-- /BARRA SUPERIOR -->
+          <!-- CONTEUDO PRINCIPAL -->
+          <div ng-view></div>
+          <!-- /CONTEUDO PRINCIPAL -->          
+        </div>
+        <!-- CONTEUDO SECUNDARIO: RODAPE E MODAL -->
+        <div class="container" ng-controller="CreditsCtrl">
+          <hr>
+          <p class="text-center" id="textAtualized">
+            <small class="text-center">Atualizado em 04 de Dezembro de 2014.</small>
+            <a data-toggle="modal" data-target="#creditosModal" class="pull-right" style="cursor:pointer" title="Sobre"><i class="fa fa-info-circle"></i></a>
+          </p>
+          <!-- MODAL SOBRE -->
+        <div class="modal fade" id="creditosModal" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="creditosModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="creditosModalLabel">Sobre</h4>
+              </div>
+              <div class="modal-body">
+                <p>Este Resumo Profissional foi feito intencionalmente em HTML. <br>Meu objetivo foi demonstrar minhas habilidades como Desenvolvedor Web. Tecnologias empregadas:
+                  <br>
+                  <div id="tecnologiaNav">
+                    <ul>
+                      <li ng-repeat="tecno in tecnologias"><a href="{{ tecno.url }}" target="_blank" class="thumbnail" ng-hover=""><img ng-src="{{ tecno.src }}" title="{{ tecno.name }}"></a></li>
+                    </ul>
+                    <br>                    
+                  </div>                               
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div><!-- /MODAL SOBRE -->          
+      </div><!-- /CONTEUDO SECUNDARIO: RODAPE E MODAL -->
+    </body>
+</html>

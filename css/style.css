@@ -1,0 +1,174 @@
+/*
+ RESUMO PROFISSIONAL - Estilos personalizados
+ (c) 2014 Marley Adriano de Souza Silva - <marleyas@gmail.com>
+ License: MIT
+*/
+
+body {            
+  margin-top: 10px;
+  margin-bottom: 5px;  
+}
+
+.navbar-nav>li>a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.nav>li>a {
+  padding: 10px 10px;
+}
+img.floatLeft {
+  float: left;
+  margin: 5px 20px 15px 0;              
+  height: 185px;
+  padding: 4px;
+  width: 150px;
+}
+.progress {
+  height: 15px;
+  margin-bottom: 5px;
+}
+.table {
+  margin-bottom: 5px;
+}
+h1 {
+  font-size: 72px;
+  font-weight: bold;
+}
+h4 {
+  font-weight: bold;
+}
+.borderLeft {
+  border-left: 1px solid #e6e6e6;
+}
+.borderRight {
+  border-right: 1px solid #e6e6e6;
+}
+.lead {
+  margin-bottom: 1px;
+}
+.page-header {
+  padding-bottom: 10px;
+  margin: 20px 0 21px;
+}
+.page-header>h2 {              
+  margin-bottom: 1px;
+}
+
+.panel-dispo {
+  border: 3px solid #e6e6e6;
+}
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn-send {
+  width: 100px;
+}
+.btn-send-lg {
+  width: 200px;
+}
+.ul-roler {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+}
+
+.minhasHabilidades {
+  min-height: 100px;
+}
+
+.minhasHabilidades>span {
+  font-size: 0.7em;
+}
+
+.minhasHabilidades.ng-enter, 
+.minhasHabilidades.ng-leave {
+  transition: all 500ms;
+}
+
+.minhasHabilidades.ng-enter {
+  opacity:0;
+}
+
+.minhasHabilidades.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.minhasHabilidades.ng-leave {
+  opacity:1;
+}
+
+.minhasHabilidades.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.baseText {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.baseText.textUpper {
+  color: red;
+  font-size:3em;
+  text-transform: uppercase;
+}
+
+#tecnologiaNav {
+  min-height:120px;
+  margin-top: 20px;
+}
+
+#tecnologiaNav ul {
+display: block;
+list-style: none;
+margin: 0;
+padding: 0;
+
+}
+
+#tecnologiaNav ul li {
+  float: left;
+  position: relative;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
+  margin-left: 11px;
+}
+
+#tecnologiaNav ul li a {
+display: block;
+text-decoration: none;
+text-indent: -999em;
+}
+
+#tecnologiaNav ul li img:hover,
+#tecnologiaNav ul li a.current {
+	-webkit-transform:scale(1.5); /* prefixo para browsers webkit */
+	-moz-transform:scale(1.5); /* prefixo para browsers gecko */
+	-o-transform:scale(1.5); /* prefixo para opera */
+	transform:scale(1.5);
+} 
+
+.help-block {
+  font-size: 0.8em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.0; }
+  to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0.0 }
+  to { opacity: 1.0 }
+}
+
+.fade-in { 
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+}
+
+.linkHide, a:hover {
+  color: #333333;
+  cursor: pointer;
+} 
